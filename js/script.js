@@ -21,22 +21,28 @@
 //     scrivi solo il numero;
 
 // selezione del container principale
-let containerEl = document.getElementById("container");
+let containerElement = document.getElementById("container");
+
+
 // logica di stampa fizz e buzz
-for (let i = 1; i <=140; i++) {
+for (let i = 1; i <= 140; i++) {
     // creazione elemento nel container
-    let numberEl = document.createElement("div");
+    let numberElement = document.createElement('div');
+    //aggiungo la creazione di un elemento in container principale
+    // i numeri saranno figli di container
+    containerElement.append(numberElement);
+
     if (i % 3 == 0 && i % 5 == 0) {
         console.log("FizzBuzz");
+        numberElement.innerText = "FizzBuzz";
     } else if (i % 3 == 0) {
         console.log("Fizz");
+        numberElement.innerText = "Fizz";
     } else if (i % 5 == 0) {
         console.log("Buzz");
+        numberElement.innerText = "Buzz";
     } else {
         console.log(i);
+        numberElement.innerText = i;
     }
 }
-//aggiungo la creazione di un elemento in container principale
-// i numeri saranno figli di container
-containerEl.append(numberEl);
-
