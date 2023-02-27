@@ -35,14 +35,18 @@ for (let i = 1; i <= 140; i++) {
     if (i % 3 == 0 && i % 5 == 0) {
         console.log("FizzBuzz");
         numberElement.innerText = "FizzBuzz";
+        numberElement.style.backgroundColor = "#e16a1f"
     } else if (i % 3 == 0) {
         console.log("Fizz");
         numberElement.innerText = "Fizz";
+        numberElement.style.backgroundColor = "yellow"
     } else if (i % 5 == 0) {
         console.log("Buzz");
         numberElement.innerText = "Buzz";
+        numberElement.style.backgroundColor = "red"
     } else {
         console.log(i);
         numberElement.innerText = i;
+        numberElement.style.backgroundColor = "#007acc"
     }
 }
