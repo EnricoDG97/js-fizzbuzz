@@ -20,7 +20,12 @@
 // ALTRIMENTI
 //     scrivi solo il numero;
 
+// selezione del container principale
+let containerEl = document.getElementById("container");
+// logica di stampa fizz e buzz
 for (let i = 1; i <=140; i++) {
+    // creazione elemento nel container
+    let numberEl = document.createElement("div");
     if (i % 3 == 0 && i % 5 == 0) {
         console.log("FizzBuzz");
     } else if (i % 3 == 0) {
@@ -31,3 +36,7 @@ for (let i = 1; i <=140; i++) {
         console.log(i);
     }
 }
+//aggiungo la creazione di un elemento in container principale
+// i numeri saranno figli di container
+containerEl.append(numberEl);
+
